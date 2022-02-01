@@ -1,0 +1,93 @@
+@import 'mixins';
+
+.weather-info {
+  flex: 0 1 60%;
+  @include adaptive-value("padding-left", 20, 15, 1);
+  @include adaptive-value("padding-right", 20, 15, 1);
+  @include adaptive-value("padding-top", 20, 12, 1);
+  @include adaptive-value("padding-bottom", 20, 12, 1);
+  background: #161B22;
+  border: 1px solid #21262D;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+
+  @media(max-width: 734px){
+    flex: 0 1 100%;
+  }
+
+
+  &__inner{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title{
+    display: flex;
+    justify-content: space-between;
+
+    &-city{
+      font-style: normal;
+      font-weight: 400;
+      @include adaptive-value("font-size", 20, 18, 1);
+      line-height: 23px;
+      color: #E2E7E7;
+    }
+    span{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      color: #959696;
+      display: block;
+      margin-top: 10px;
+    }
+  }
+
+
+
+
+  &__main{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    &-temp{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 28px;
+      color: #E2E7E7;
+    }
+
+    &-desc{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      color: #6563FF;
+      margin-top: 3px;
+      text-transform: capitalize;
+    }
+
+    sup{
+      margin-left: 2px;
+    }
+
+    &-temps{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 28px;
+      color: #E2E7E7;
+
+      span{
+        margin-left: 6px;
+        margin-right: 6px;
+      }
+    }
+
+    @media(max-width: 734px){
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import 'mixins';
+
+.weather-details{
+  background: #161B22;
+  border: 1px solid #21262D;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 19px;
+
+  &__city{
+    font-style: normal;
+    font-weight: normal;
+    @include adaptive-value("font-size", 20, 18, 1);
+    line-height: 23px;
+    color: #E2E7E7;
+  }
+
+  &__temp{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #E2E7E7;
+    margin-top: 16px;
+    sup{
+      margin-left: 3px;
+    }
+  }
+
+  span{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #959696;
+    margin-top: 6px;
+  }
+
+  &__main{
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    @include adaptive-value("column-gap", 38, 20, 1);
+  }
+
+  &__main-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-top: 1px solid #21262D;
+    flex: 1 1 45%;
+    column-gap: 20px;
+    @media(max-width: 586px){
+      flex: 1 1 100%;
+    }
+  }
+
+
+  &__main-desc{
+    display: flex;
+    align-items: flex-start;
+    column-gap: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #959696;
+  }
+
+  &__main-info{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+  }
+
+  &__main-bars{
+    canvas{
+      width: 762px;
+      height: 250px;
+    }
+  }
+
+
+}

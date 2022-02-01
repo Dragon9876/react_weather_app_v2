@@ -1,0 +1,25 @@
+@import 'mixins';
+
+.accessories__button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  @include adaptive-value("padding-left", 32, 15, 1);
+  @include adaptive-value("padding-right", 32, 15, 1);
+  text-align: center;
+  min-height: 42px;
+  background: #FFFFFF;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  border-radius: 5px;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  @include adaptive-value("font-size", 18, 14, 1);
+  line-height: 22px;
+  color: #000000;
+  &-active{
+    background: #4793FF;
+    transition: 0.5s background;
+    color: white;
+  }
+}

@@ -1,0 +1,30 @@
+.forecast-daily__inner{
+  margin-top: 24px;
+  background: #161B22;
+  border: 1px solid #21262D;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+
+
+}
+
+.forecast-daily__title{
+  div{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #E2E7E7;
+    span{
+      margin-left: 8px;
+    }
+  }
+  span{
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #8B949E;
+  }
+}

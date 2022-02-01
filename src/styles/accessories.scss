@@ -1,0 +1,36 @@
+.accessories{
+  font-family: "Roboto";
+  &__title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 23px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #323941;
+  }
+
+  &__text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 119.3%;
+    text-align: center;
+    color: #999999;
+  }
+
+  &__price{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #323941;
+
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+}

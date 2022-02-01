@@ -1,0 +1,21 @@
+@import 'mixins';
+
+.wrapper{
+  margin-top: 25px;
+  background-color: #161B22;
+  border-radius: 8px;
+  @include adaptive-value("padding-top", 12, 8, 1);
+  @include adaptive-value("padding-left", 40, 12, 1);
+  @include adaptive-value("padding-right", 40, 12, 1);
+  @include adaptive-value("padding-bottom", 40, 12, 1);
+}
+
+.main{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  @media(max-width: 734px){
+    row-gap: 20px;
+    flex-wrap: wrap;
+  }
+}

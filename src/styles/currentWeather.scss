@@ -1,0 +1,76 @@
+@import 'mixins';
+
+.current-weather {
+  flex: 0 1 350px;
+
+  @media(max-width: 734px){
+    flex: 0 1 100%;
+  }
+
+  &__inner{
+    @include adaptive-value("padding-left", 20, 15, 1);
+    @include adaptive-value("padding-right", 20, 15, 1);
+    @include adaptive-value("padding-top", 20, 12, 1);
+    @include adaptive-value("padding-bottom", 20, 12, 1);
+    background: #161B22;
+    border: 1px solid #21262D;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+  }
+
+  &__main{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    svg{
+      width: 120px;
+    }
+  }
+
+  &__temp{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 80%;
+    color: #E2E7E7;
+    @include adaptive-value("font-size", 24, 20, 1);
+    sup{
+      margin-left: 2px;
+    }
+  }
+
+  &__time{
+    margin-top: 30px;
+  }
+
+  &__time, &__city{;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 19px;
+    color: #959696;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:last-child{
+      @include adaptive-value("margin-top", 20, 16, 1);
+    }
+  }
+
+  &__title{
+    display: flex;
+    align-items: center;
+    column-gap: 9px;
+  }
+
+  span{
+    @include adaptive-value("font-size", 16, 14, 1);
+    font-style: normal;
+    font-weight: normal;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.15);
+    margin-top: 11px;
+    display: block;
+  }
+}
